@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:07:45 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/02 16:08:39 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/03 17:12:31 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,21 @@
 
 typedef struct s_data {
 	char  **map;
+	int	collectible;
 }	t_data;
 
 // Parsing
 int	check_arg(int argc, char **argv);
+int	parsing(t_data *data);
+int check_map_size(char **map);
+int count_colones(char **map);
+int count_lignes(char **map);
+int check_P(char **map);
+int check_E(char **map);
+int check_C(t_data *data);
+int	check_char(char **map);
+// int check_walls(char **map);
+int check_elements(t_data *data);
 
 // Map Init
 char	**create_map(char *file);

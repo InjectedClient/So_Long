@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:15:40 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/01 17:23:17 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/03 11:48:43 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,18 @@ int	check_arg(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		printf("Error\nInvalid number of arguments !\n");
+		ft_printf("Error\nInvalid number of arguments !\n");
 		return (0);
 	}
 	if (!the_ber(argv))
 	{
-		printf("Error\nFUCK YOU RICHIE! This is not a .ber file\n");
+		ft_printf("Error\nFUCK YOU RICHIE! This is not a .ber file\n");
 		return (0);
 	}
 	map = open(argv[1], O_RDONLY);
 	if (map < 0)
 	{
-		printf("Error\nFile not found\n");
+		ft_printf("Error\nFile not found\n");
 		return (0);
 	}
 	return (1);

@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:07:12 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/02 16:33:38 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/03 16:54:32 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,12 @@ int main(int argc, char **argv)
 {
 	t_data data;
 
-	if (!check_arg(argc, argv))
+	if (!check_arg(argc, argv)) // verifie les arg > 2, .ber et pas de map
 		return (0);
-	data.map = create_map(argv[1]);
+	data.map = create_map(argv[1]); //creer la map en allant ligne par ligne dans le .ber
+	if (!parsing(&data))
+	{
+		return (0);
+	}
 	return (1);
 }
