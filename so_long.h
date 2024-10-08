@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:07:45 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/03 17:12:31 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/08 14:40:54 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,16 @@
 # include "minilibx-linux/mlx.h"
 # include "libft/libft.h"
 
+typedef struct s_position {
+	int x;
+	int y;
+} t_position;
+
 typedef struct s_data {
 	char  **map;
 	int	collectible;
 }	t_data;
+
 
 // Parsing
 int	check_arg(int argc, char **argv);
@@ -31,8 +37,19 @@ int check_P(char **map);
 int check_E(char **map);
 int check_C(t_data *data);
 int	check_char(char **map);
-// int check_walls(char **map);
+int check_walls(char **map);
 int check_elements(t_data *data);
+int first_line(char **map);
+int last_line(char **map);
+int first_char(char **map);
+int last_char(char **map);
+int check_path(char **map);
+char **map_copy(char **map);
+t_position find_p(char **map);
+int is_valid(int x, int y, char **map);
+int floodfill(int x, int y, char **map);
+void flood_fill_coins(int x, int y, char **map, int *coins);
+int check_coins(t_data *data);
 
 // Map Init
 char	**create_map(char *file);

@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:07:12 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/03 16:54:32 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/08 15:05:38 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main(int argc, char **argv)
 	data.map = create_map(argv[1]); //creer la map en allant ligne par ligne dans le .ber
 	if (!parsing(&data))
 	{
+		free_my_map(data.map);
 		return (0);
 	}
 	return (1);
