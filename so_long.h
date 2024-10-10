@@ -6,12 +6,18 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:07:45 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/08 14:40:54 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/10 16:20:53 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
+
+# define UP		115
+# define DOWN	119
+# define LEFT	97
+# define RIGHT	100
+# define ESC	65307
 
 # include "minilibx-linux/mlx.h"
 # include "libft/libft.h"
@@ -22,8 +28,22 @@ typedef struct s_position {
 } t_position;
 
 typedef struct s_data {
-	char  **map;
-	int	collectible;
+	int		mouv;
+	int		columns;
+	int		lines;
+	int		width;
+	int		height;
+	int		perso_x;
+	int		perso_y;
+	int		c;
+	char	**map;
+	void	*mlx;
+	void	*window;
+	void	*perso;
+	void	*floor;
+	void	*wall;
+	void	*collectible;
+	void	*exit;
 }	t_data;
 
 
@@ -58,5 +78,15 @@ int count_lines(char *file);
 void free_my_map(char **map);
 char **change_newlines(char **map);
 void	print_map(char **map);
+
+void	*sprites_init(t_data *data);
+int		data_init(t_data *data);
+int	close_window(t_data *data);
+void	display_utils(t_data *data, int i, int j);
+void	display_mouv_count(t_data *data);
+int	display(t_data *data);
+int	key_parsing(int key, t_data *data);
+void	end_game(t_data	*data);
+int count_C(t_data *data);
 
 # endif

@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:21:46 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/08 14:48:11 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/10 16:16:44 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int floodfill(int x, int y, char **map)
 {
 	if (map[x][y] == 'E')
 		return (1);
-	if (!is_valid(x, y, map) || map[x][y] != 'F')
+	if (!is_valid(x, y, map) || map[x][y] == 'F')
 		return (0);
 	map[x][y] = 'F';
 	if (floodfill(x - 1, y, map))

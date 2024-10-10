@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 16:34:29 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/08 14:41:07 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/10 16:22:19 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	parsing(t_data *data)
 		}
 	else if (!check_elements(data))
 		return (0);
-	else if ((!check_path(data->map)) || (!check_coins(data)))
+	else if (!check_path(data->map) || !check_coins(data))
 	{
 			ft_printf("Error\nNo valid path found");
 			return (0);
@@ -99,7 +99,7 @@ int check_coins(t_data *data)
 	posi = find_p(map_dup);
 	flood_fill_coins(posi.x, posi.y, map_dup, &total_coins);
 	free_my_map(map_dup);
-	if (total_coins != check_C(data))
+	if (total_coins != count_C(data))
 		return (0);
 	return (1);
 }

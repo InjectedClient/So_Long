@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 15:12:46 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/03 17:09:58 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/10 16:33:42 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ int check_C(t_data *data)
 		return (0);
 	else
 	{
-		data->collectible = count_c;
+		data->c = count_c;
 		return (1);
 	}
 }
