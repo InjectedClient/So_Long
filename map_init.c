@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 16:35:40 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/02 16:31:48 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/14 14:13:15 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int count_lines(char *file)
 	while (line != NULL)
 	{
 		count ++;
+		free (line);
 		line = get_next_line(fd);
 	}
 	close(fd);
@@ -46,7 +47,6 @@ int read_and_stock(char ***map, int fd)
 		i ++;
 	}
 	(*map)[i] = 0;
-	free(line);
 	return(1);
 }
 
@@ -64,7 +64,6 @@ char	**create_map(char *file)
 	if (!map)
 	{
 		close (fd);
-		free (map);
 		return (NULL);
 	}
 	if (!read_and_stock(&map, fd))

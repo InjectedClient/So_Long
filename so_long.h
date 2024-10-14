@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:07:45 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/10 16:20:53 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/14 13:58:57 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,6 @@ void	display_mouv_count(t_data *data);
 int	display(t_data *data);
 int	key_parsing(int key, t_data *data);
 void	end_game(t_data	*data);
-int count_C(t_data *data);
+int	count_C(t_data *data);
 
 # endif

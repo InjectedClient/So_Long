@@ -5,7 +5,7 @@ CFLAGS = -Wall -Wextra -Werror
 MLX_FLAGS = -L./minilibx-linux -lmlx -lX11 -lXext -lm
 RM = rm -rf
 
-SRCS = key_parsing.c display_map.c parsing_utils.c parsing_utils2.c map_parsing.c arg_parsing.c main.c map_init.c utils.c floodfill.c
+SRCS = parsing_utils3.c key_parsing.c display_map.c parsing_utils.c parsing_utils2.c map_parsing.c arg_parsing.c main.c map_init.c utils.c floodfill.c
 
 OBJS = $(SRCS:.c=.o)
 
