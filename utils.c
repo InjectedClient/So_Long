@@ -6,15 +6,15 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 15:27:03 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/02 16:31:52 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/15 15:19:38 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void free_my_map(char **map)
+void	free_my_map(char **map)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (map[i])
@@ -25,10 +25,10 @@ void free_my_map(char **map)
 	free(map);
 }
 
-char **change_newlines(char **map)
+char	**change_newlines(char **map)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (map[i])

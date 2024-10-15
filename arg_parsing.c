@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 14:15:40 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/03 11:48:43 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/15 13:49:42 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	the_ber(char **argv)
 {
-	int len;
+	int	len;
 
 	len = ft_strlen(argv[1]);
 	if (argv[1][len - 1] != 'r')
@@ -30,7 +30,7 @@ int	the_ber(char **argv)
 
 int	check_arg(int argc, char **argv)
 {
-	int map;
+	int	map;
 
 	if (argc != 2)
 	{

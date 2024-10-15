@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 13:21:46 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/10 16:16:44 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/15 14:58:36 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  * map et map[xy] doit exister
  * la case doit etre 0, P ou C
  */
-int is_valid(int x, int y, char **map)
+int	is_valid(int x, int y, char **map)
 {
 	if ((x && y >= 0) && (map[x] && map[x][y]) && (map[x][y] == '0' || \
 		map[x][y] == 'P' || map[x][y] == 'C'))
@@ -34,7 +34,8 @@ int is_valid(int x, int y, char **map)
  * aucune sortie trouvee-> 0
  * sortie trouvee -> 1
  */
-int floodfill(int x, int y, char **map)
+
+int	floodfill(int x, int y, char **map)
 {
 	if (map[x][y] == 'E')
 		return (1);
@@ -51,13 +52,14 @@ int floodfill(int x, int y, char **map)
 		return (1);
 	return (0);
 }
+
 /**
  * check si la pos est pas deja F
  * si case contient 'C' incremente le compteur coin
  * marque la case comme remplie 'F'
  * pareil cases adjacentes
  */
-void flood_fill_coins(int x, int y, char **map, int *coins)
+void	flood_fill_coins(int x, int y, char **map, int *coins)
 {
 	if (!is_valid(x, y, map) || map[x][y] == 'F')
 		return ;
@@ -70,11 +72,11 @@ void flood_fill_coins(int x, int y, char **map, int *coins)
 	flood_fill_coins(x, y - 1, map, coins);
 }
 
-t_position find_p(char **map)
+t_position	find_p(char **map)
 {
-	int i;
-	int j;
-	t_position pos;
+	int			i;
+	int			j;
+	t_position	pos;
 
 	pos.x = -1;
 	pos.y = -1;
@@ -96,4 +98,3 @@ t_position find_p(char **map)
 	}
 	return (pos);
 }
-

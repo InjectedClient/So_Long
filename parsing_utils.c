@@ -6,15 +6,15 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 15:12:46 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/10 16:33:42 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/15 15:18:03 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-int count_colones(char **map)
+int	count_colones(char **map)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (map[0] && map[0][i])
@@ -22,20 +22,21 @@ int count_colones(char **map)
 	return (i);
 }
 
-int count_lignes(char **map)
+int	count_lignes(char **map)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (map[i])
 		i ++;
 	return (i);
 }
-int check_P(char **map)
+
+int	check_p(char **map)
 {
-	int i;
-	int j;
-	int count_p;
+	int	i;
+	int	j;
+	int	count_p;
 
 	j = 0;
 	i = 0;
@@ -56,11 +57,12 @@ int check_P(char **map)
 	else
 		return (0);
 }
-int check_E(char **map)
+
+int	check_e(char **map)
 {
-	int i;
-	int j;
-	int count_e;
+	int	i;
+	int	j;
+	int	count_e;
 
 	j = 0;
 	i = 0;
@@ -81,11 +83,12 @@ int check_E(char **map)
 	else
 		return (0);
 }
-int check_C(t_data *data)
+
+int	check_c(t_data *data)
 {
-	int i;
-	int j;
-	int count_c;
+	int	i;
+	int	j;
+	int	count_c;
 
 	j = 0;
 	i = 0;

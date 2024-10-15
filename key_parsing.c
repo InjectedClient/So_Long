@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 15:41:13 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/10 15:46:46 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/15 15:16:45 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,7 @@ static void	left(t_data *data)
 
 int	key_parsing(int key, t_data *data)
 {
-	data->c = check_C(data);
+	data->c = check_c(data);
 	if (key == UP)
 		up(data);
 	else if (key == DOWN)

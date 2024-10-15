@@ -6,7 +6,7 @@
 /*   By: nlambert <nlambert@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 15:02:12 by nlambert          #+#    #+#             */
-/*   Updated: 2024/10/10 15:44:47 by nlambert         ###   ########.fr       */
+/*   Updated: 2024/10/15 14:57:30 by nlambert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	*sprites_init(t_data *data)
 		return (0);
 	return (0);
 }
+
 int	close_window(t_data *data)
 {
 	mlx_destroy_window(data->mlx, data->window);
